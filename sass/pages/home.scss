@@ -4,6 +4,8 @@
 @import "../components/popularDishes";
 @import "../components/menu";
 @import "../components/sign";
+@import "../components/newscard";
+@import "../components/menunav";
 
 .hero{
     width: 100%;
@@ -15,6 +17,24 @@
     }
     background-color: var(--bgColor-red);
     font-family: Cera;
+    .hero__scroll-sign{
+        position: absolute;
+        bottom: 2rem;
+        right: 1rem;
+        color: white;
+        font-size: $font16;
+        font-weight: 700;
+        letter-spacing: 4%;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -5rem;
+            width: 2px;
+            height: 61px;
+            background: linear-gradient(to bottom, white, transparent);
+        }
+    }
     .row{
         .col-lg-6{
             p{
@@ -69,15 +89,6 @@
     }
     .container{
         position: relative;
-    .content__logo{
-        width: 75px;
-        height: 75px;
-        position: absolute;
-        bottom: -112.5px;
-        right: 20px;
-        animation: logoRotate 7.5s linear infinite;
-        -webkit-animation: logoRotate 7.5s linear infinite;
-}
 @keyframes logoRotate {
     0%{
         transform: rotate(0deg);
@@ -181,53 +192,6 @@
                 }
             }
         }
-        &-buttons{
-            width: 100%;
-            padding: 5px;
-            position: relative;
-            overflow: auto;
-            &-wrapper{
-                display: grid;
-                width: 100%;
-                min-width: 1200px;
-                gap: 5px;
-                grid-template-columns: repeat(8, auto);
-                &-slider{
-                    position: absolute;
-                    width: 0;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-radius: 100px;
-                    height: 48px;
-                    transition: .5s ease;
-                    z-index: -2 !important;
-                    background-color: var(--bgColor-red);
-                    -webkit-transition: .5s ease;
-                    -moz-transition: .5s ease;
-                    -ms-transition: .5s ease;
-                    -o-transition: .5s ease;
-                    -webkit-border-radius: 100px;
-                    -moz-border-radius: 100px;
-                    -ms-border-radius: 100px;
-                    -o-border-radius: 100px;
-                    -webkit-transform: translateY(-50%);
-                    -moz-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    -o-transform: translateY(-50%);
-                }
-                &-button{
-                    @include btn(10px 30px, var(--bgColor-red), var(--bgColor-red));
-                    @include df(center, center, row);
-                    height: 50px;
-                    white-space: nowrap;
-                    cursor: pointer;
-                    &.active{
-                        color: white;
-                    }
-                }
-            }
-        }
     }
 }
 .customers{
@@ -250,6 +214,51 @@
             font-family: Cera;
         }
         .customers-carousel{
+            .owl-dots{
+                width: 150px;
+                position: absolute;
+                left: 50%;
+                bottom: 10px;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                .owl-dot{
+                    color: var(--fontColor-black);
+                    margin: 5px;
+                    position: relative;
+                    transition: .3s linear;
+                    -webkit-transition: .3s linear;
+                    -moz-transition: .3s linear;
+                    -ms-transition: .3s linear;
+                    -o-transition: .3s linear;
+                    &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -12.5px;
+                    width: 10px;
+                    height: 1px;
+                    background-color: var(--fontColor-black);
+                    display: none;
+                    }
+                    &.active{
+                        margin-right: 10px;
+                        &::before{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                @media (max-width: 575px) {
+                    width: 250px;
+                    margin: 0 auto;
+                    display: flex; 
+                    justify-content: space-between;
+                }
+            }
             .owl-next,
             .owl-prev {
                 width: 40px;
@@ -355,6 +364,125 @@
                 div{
                     gap: 25px;
                 }
+            }
+        }
+    }
+}
+.news{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__wrapper{
+        width: 100%;
+        text-align: center;
+        font-family: Cera;
+        a{
+            button{
+                margin-top: 3rem;
+                @include btn(8px 32px, var(--fontColor-black), var(--bgColor-red));
+            }
+        }
+        h4{
+            font-size: $font23;
+            font-weight: 700;
+            letter-spacing: 4%;
+        }
+        h1{
+            font-size: $font48;
+            font-weight: 500;
+            letter-spacing: 3%;
+            color: var(--bgColor-red)
+        }
+        svg{
+            path{
+                fill: var(--bgColor-red);
+            }
+        }
+        &-cards{
+            display: grid;
+            place-items: center center;
+            grid-gap: .5rem;
+            padding-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+.video{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 700px;
+    background-image: url('../../assets/images/home/modal.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 1px solid var(--bgColor-red);
+        background-color: transparent;
+        @include df(center, center, row);
+        img{
+            width: 29px;
+            height: 35px;
+        }
+    }
+    .content__logo{
+        top: 77px;
+        left: 20%;
+    }
+}
+.gallery{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__wrapper{
+        width: 100%;
+        .owl-carousel{
+            width: 1200px !important;
+            .item{
+                height: 400px;
+                border-radius: 14px;
+                -webkit-border-radius: 14px;
+                -moz-border-radius: 14px;
+                -ms-border-radius: 14px;
+                -o-border-radius: 14px;
+                &:hover{
+                    filter: brightness(50%);
+                    -webkit-filter: brightness(50%);
+                 }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 14px;
+                    -webkit-border-radius: 14px;
+                    -moz-border-radius: 14px;
+                    -ms-border-radius: 14px;
+                    -o-border-radius: 14px;
+                }
+            }
+        }
+    }
+}
+.modal{
+    .modal-dialog{
+        .modal-content{
+            background-color: var(--bgColor-red) !important;
+            .btn-close{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                opacity: 1 !important;
+            }
+            iframe{
+                width: 95%;
             }
         }
     }

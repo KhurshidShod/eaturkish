@@ -1,18 +1,9 @@
-.hero__scroll-sign{
+.content__logo{
+    width: 75px;
+    height: 75px;
     position: absolute;
-    bottom: 2rem;
-    right: 1rem;
-    color: white;
-    font-size: $font16;
-    font-weight: 700;
-    letter-spacing: 4%;
-    &::before{
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: -5rem;
-        width: 2px;
-        height: 61px;
-        background: linear-gradient(to bottom, white, transparent);
-    }
+    bottom: -112.5px;
+    right: 20px;
+    animation: logoRotate 7.5s linear infinite;
+    -webkit-animation: logoRotate 7.5s linear infinite;
 }

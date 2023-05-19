@@ -24,6 +24,8 @@ window.addEventListener("scroll", () => {
 function indicator(e) {
     slider.style.left = e.offsetLeft + "px";
     slider.style.width = e.offsetWidth + "px";
+    console.log(e.offsetLeft)
+    console.log(e.offsetWidth)
 }
 
 item.forEach(itm => {

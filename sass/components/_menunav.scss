@@ -1,0 +1,50 @@
+.menu__wrapper-buttons{
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    overflow: auto;
+    &-wrapper{
+        display: grid;
+        width: 100%;
+        min-width: 1200px;
+        gap: 5px;
+        grid-template-columns: repeat(8, auto);
+        &-slider{
+            position: absolute;
+            width: 80px;
+            @media (min-width: 1400px) {
+                width: 88px;
+            }
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 100px;
+            height: 48px;
+            transition: .5s ease;
+            z-index: -2 !important;
+            background-color: var(--bgColor-red);
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            -ms-transition: .5s ease;
+            -o-transition: .5s ease;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+        }
+        &-button{
+            @include btn(10px 30px, var(--bgColor-red), var(--bgColor-red));
+            @include df(center, center, row);
+            height: 50px;
+            white-space: nowrap;
+            cursor: pointer;
+            &.active{
+                color: white;
+            }
+        }
+    }
+}

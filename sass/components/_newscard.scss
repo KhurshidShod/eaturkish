@@ -1,0 +1,88 @@
+@use "../utils/variables" as *;
+@use "../base/typography";
+.news__wrapper-cards-card{
+    border-radius: 14px;
+    max-width: 410px;
+    border: 1px solid #2424241A;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: Cera;
+    text-align: start;
+    &:hover{
+        @media (min-width: 992px) {
+            justify-content: end;
+            position: relative;
+            height: 350px;
+            transition: .3s linear;
+            -webkit-transition: .3s linear;
+            -moz-transition: .3s linear;
+            -ms-transition: .3s linear;
+            -o-transition: .3s linear;
+        }
+        img{
+        @media (min-width: 992px) {
+            position: relative;
+            top: 35px;
+            transform: scale(.75);
+            -webkit-transform: scale(.75);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            -moz-transform: scale(.75);
+            -ms-transform: scale(.75);
+            -o-transform: scale(.75);
+            border-radius: 14px;
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -ms-border-radius: 14px;
+            -o-border-radius: 14px;
+        }
+        }
+    }
+    img{
+        width: 100%;
+        max-height: 350px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+}
+    h5, p {
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    h5{
+        font-size: $font24;
+        font-weight: 500;
+        max-width: 332px;
+        text-transform: capitalize;
+        line-height: 32px;
+        color: var(--fontColor-black);
+    }
+    p{
+        color: var(--fontColor-lightgrey);
+        font-size: $font14;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 361px
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        p{
+            &:first-child{
+                color: var(--bgColor-red);
+                font-size: $font16;
+                font-weight: 700;
+                letter-spacing: 4%;
+            }
+            &:last-child{
+                color: var(--fontColor-black);
+                opacity: 50%;
+                font-size: $font14;
+                font-weight: 400;
+                letter-spacing: 4%;
+            }
+        }
+    }
+}
