@@ -1,0 +1,18 @@
+.hero__scroll-sign{
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    color: white;
+    font-size: $font16;
+    font-weight: 700;
+    letter-spacing: 4%;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -5rem;
+        width: 2px;
+        height: 61px;
+        background: linear-gradient(to bottom, white, transparent);
+    }
+}

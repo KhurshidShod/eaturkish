@@ -1,0 +1,29 @@
+@mixin btn($padding, $color, $borderColor) {
+    padding: $padding;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid $borderColor;
+    color: $color;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: .1s ease;
+    -webkit-transition: .1s ease;
+    -moz-transition: .1s ease;
+    -ms-transition: .1s ease;
+    -o-transition: .1s ease;
+    &:hover{
+        background-color: $borderColor;
+        @if $color == white {
+            color: var(--bgColor-red);
+        } @else {
+            color: white;
+        }
+    }
+}
+@mixin df($jc, $ai, $fd){
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}

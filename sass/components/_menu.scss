@@ -1,0 +1,90 @@
+.menu__wrapper-content-page-card{
+    border: 1px solid #2424241A;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;  
+    padding: 40px 20px;  
+    display: grid;
+    height: 350px;
+    justify-items: center;
+    z-index: 0;
+    max-width: 350px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    cursor: pointer;
+    grid-template-rows: auto;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--bgColor-red);
+        clip-path: circle(0 at 50% 50%);
+    }
+    &:hover{
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+    align-items: end;
+    color: white;
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(.9);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
+    -webkit-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(.9);
+    -moz-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(.9);
+    -ms-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(.9);
+    -o-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(.9);
+    p{
+        color: white;
+    }
+    h5{
+        color: white;
+    }
+    img{
+        position: relative;
+        top: -50px;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        -ms-transition: .3s linear;
+        -o-transition: .3s linear;
+}
+    }
+    &:hover::before{
+        clip-path: circle(100%);
+        transition: .5s linear;
+        -webkit-transition: .5s linear;
+        -moz-transition: .5s linear;
+        -ms-transition: .5s linear;
+        -o-transition: .5s linear;
+        border-radius: 14px;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+}
+    img{
+        width: 100% !important;
+        max-width: 270px;
+    }
+    p{
+        color: var(--fontColor-black)
+    }
+    h5{
+        color: var(--bgColor-red);
+        font-weight: 700;
+        font-size: $font24;
+    }
+}
