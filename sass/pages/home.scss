@@ -9,6 +9,10 @@
     width: 100%;
     padding-top: 7rem;
     padding-bottom: 7rem;
+    @media (max-width: 992px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
     background-color: var(--bgColor-red);
     font-family: Cera;
     .row{
@@ -30,6 +34,10 @@
             }
             h1{
                 font-size: $font90;
+                @media (max-width: 766px) {
+                    font-size: $font48;
+                    line-height: 45px;
+                }
                 font-weight: 600;
                 text-transform: capitalize;
                 color: white;

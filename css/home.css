@@ -779,6 +779,12 @@ nav ul li button:hover {
   background-color: var(--bgColor-red);
   font-family: Cera;
 }
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
 .hero .row .col-lg-6 p:first-child {
   font-weight: 700;
   font-size: 23px;
@@ -799,6 +805,12 @@ nav ul li button:hover {
   color: white;
   letter-spacing: 4%;
   line-height: 117px;
+}
+@media (max-width: 766px) {
+  .hero .row .col-lg-6 h1 {
+    font-size: 48px;
+    line-height: 45px;
+  }
 }
 .hero .row .col-lg-6 button {
   padding: 8px 32px;
