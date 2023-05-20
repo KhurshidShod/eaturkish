@@ -1,1 +1,132 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
 @import "../global";
+
+.about{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--bgColor-grey);
+    font-family: 'Open Sans';
+    &__container{
+        h1{
+            color: var(--bgColor-red);
+            font-family: Cera;
+            font-size: $font32;
+            font-weight: 500;
+        }
+        svg{
+            path{
+                fill: var(--bgColor-red);
+            }
+        }
+        .about__wrapper{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            @media (max-width: 992px){
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-flow: row;
+            }
+            &-contacts{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                padding: 1rem;
+                justify-items: start;
+                @media (max-width: 992px){
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 5px;
+                    justify-items: center;
+                }
+                &-contact{
+                    background-color: transparent;
+                    border: 1px solid var(--card-border);
+                    display: grid;
+                    max-width: 300px;
+                    grid-template-columns: 1fr 3fr;
+                    justify-items: start;
+                    padding: 1rem;
+                    gap: 1rem;
+                    align-items: center;
+                    border-radius: 14px;
+                    -webkit-border-radius: 14px;
+                    -moz-border-radius: 14px;
+                    -ms-border-radius: 14px;
+                    -o-border-radius: 14px;
+                    div{
+                        &:first-child{
+                            width: 60px;
+                            height: 60px;
+                            display: grid;
+                            background-color: var(--bgColor-white);
+                            justify-items: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            color: var(--fontColor-black);
+                            font-size: $font18;
+                        }
+                        h5, p{
+                            padding: 0;
+                            margin: 0;
+                            color: var(--fontColor-black);
+                            font-family: 'Open Sans';
+                        }
+                        h5{
+                            font-size: $font22;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: $font14;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            &-inputs{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                padding-left: 3rem;
+                border: 1px solid var(--card-border);
+                border-radius: 14px;
+                padding: 1rem;
+                @media (max-width: 992px){
+                    padding-left: 0;
+                    padding: 1rem;
+                }
+                h1, p{
+                    color: var(--fontColor-black);
+                }
+                form{
+                    display: grid;
+                    grid-template-columns: repeat(1, 0.75fr);
+                    @media (max-width: 992px){
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    div{
+                        margin-top: .5rem;
+                        margin-bottom: .5rem;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 1rem;
+                        input{
+                            height: 60px;
+                            border: 1px solid var(--card-border);
+                            background-color: transparent;
+                            outline: none;
+                            border-radius: 12px;
+                            padding-left: 1rem;
+                        }
+                    }
+                    textarea{
+                        border: 1px solid var(--card-border);
+                        background-color: transparent;
+                        outline: none;
+                        border-radius: 12px;
+                        padding-left: 1rem;
+                        padding-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

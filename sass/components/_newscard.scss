@@ -3,7 +3,7 @@
 .news__wrapper-cards-card{
     border-radius: 14px;
     max-width: 410px;
-    border: 1px solid #2424241A;
+    border: 1px solid var(--card-border);
     display: flex;
     justify-content: space-between;
     flex-direction: column;

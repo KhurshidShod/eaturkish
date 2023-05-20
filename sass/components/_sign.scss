@@ -4,6 +4,7 @@
     position: absolute;
     bottom: -112.5px;
     right: 20px;
+    z-index: 99999999;
     animation: logoRotate 7.5s linear infinite;
     -webkit-animation: logoRotate 7.5s linear infinite;
 }

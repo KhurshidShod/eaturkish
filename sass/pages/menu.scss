@@ -2,6 +2,7 @@
 @use "../utils/mixins" as *;
 @use "../components/menu";
 @use "../components/menunav";
+@use "../components/sign";
 @import "../global";
 
 .menu{
@@ -9,6 +10,10 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     &__wrapper{
+        position: relative;
+        .content__log{
+            bottom: -10px !important;
+        }
         display: grid;
         grid-template-columns: 1.5fr 4fr;
         @media (max-width: 992px){
@@ -100,6 +105,93 @@
                     gap: 1rem !important;
                     @media (max-width: 576px){
                     grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}
+.gallery{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: Cera;
+    &__wrapper{
+        &-text{
+            h5{
+                font-size: $font23;
+                font-weight: 700;
+                letter-spacing: 4%;
+                color: var(--fontColor-black);
+            }
+            h1{
+                font-size: $font48;
+                font-weight: 700;
+                letter-spacing: 3%;
+                color: var(--fontColor-black);
+            }
+            P{
+                font-size: $font16;
+                font-weight: 400;
+                letter-spacing: 4%;
+                color: var(--fontColor-lightgrey);
+            }
+            svg{
+                path{
+                    fill: var(--bgColor-red);
+                }
+            }
+            button{
+                @include btn(8px 32px, var(--fontColor-black), var(--bgColor-red));
+            }
+        }
+        width: 100%;
+        .owl-carousel{
+            width: 1200px;
+            @media (max-width: 992px){
+                width: 100%;
+            }
+            .item{
+                height: 400px;
+                cursor: pointer;
+                border-radius: 14px;
+                -webkit-border-radius: 14px;
+                -moz-border-radius: 14px;
+                -ms-border-radius: 14px;
+                -o-border-radius: 14px;
+                i{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 50%;
+                    border-radius: 14px;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    color: white;
+                    font-size: $font24;
+                    z-index: 9;
+                    backdrop-filter: brightness(50%);
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 14px;
+                    -webkit-border-radius: 14px;
+                    -moz-border-radius: 14px;
+                    -ms-border-radius: 14px;
+                    -o-border-radius: 14px;
+                }
+                &:hover{
+                    i{
+                        display: flex !important;
                     }
                 }
             }

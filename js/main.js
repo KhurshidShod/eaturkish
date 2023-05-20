@@ -1,6 +1,11 @@
 var heroImg = document.getElementById("heroImg");
 var slider = document.getElementById("slider");
 var item = document.querySelectorAll(".menu__wrapper-buttons-wrapper-button");
+var toggleTheme = document.getElementById("toggleTheme");
+
+toggleTheme.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+})
 
 document.addEventListener("mousemove", (e) => {
     const speed = heroImg.getAttribute("data-speed");
@@ -34,3 +39,7 @@ item.forEach(itm => {
         indicator(e.target);
     })
 });
+
+window.addEventListener("load", () => {
+    document.querySelector(".loader").style.display = "none";
+})

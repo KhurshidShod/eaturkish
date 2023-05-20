@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/menu.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="sass/vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -28,6 +29,9 @@
     <title>Menu | Eaturkish</title>
 </head>
 <body>
+  <div class="loader">
+    <div></div>
+  </div>
   <nav class="navbar navbar-expand-lg position-sticky top-0">
     <div class="container">
       <a class="navbar-brand" href="index.html"
@@ -100,6 +104,9 @@
             <li class="nav-item m-2">
               <button>Log In</button>
             </li>
+            <li class="nav-item">
+              <i id="toggleTheme" class="fa-solid fa-circle-half-stroke"></i>
+              </li>
           </ul>
         </div>
       </div>
@@ -110,7 +117,7 @@
       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Library</li>
     </ol>
-  </di>
+  </div>
 
   <main>
     <section class="menu">
@@ -145,6 +152,11 @@
                   Desserts
               </div>
               </div>
+              <img
+              class="content__logo"
+              src="assets/images/home/logo2.png"
+              alt=""
+            />
           </div>
           <div class="menu__wrapper-content">
             <div class="menu__wrapper-content-page">
@@ -338,13 +350,59 @@
                   <h5>$12.00</h5>
               </div>
               <div class="menu__wrapper-content-page-card">
-                  <img src="assets/images/home/klipartz 1 (1).png" alt="">
+                  <img src="assets/images/home/klipartz 1 (2).png" alt="">
                   <p>Barbecue Shish kebab Shashlik Skewer</p>
                   <h5>$12.00</h5>
               </div>
           </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="gallery" data-aos="fade-bottom" data-aos-duration="1000">
+      <div class="container">
+          <div class="gallery__wrapper row d-flex justify-content-between flex-column flex-lg-row">
+              <div class="gallery__wrapper-text col-12 col-lg-4">
+                  <h5>Instagram</h5>
+                  <svg width="40" height="9" viewBox="0 0 40 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2_324)">
+                      <path d="M33.5016 9C37.0849 9 40 6.98129 40 4.49995C40 2.01861 37.0849 0 33.5016 0C30.1122 0 27.3221 1.80637 27.03 4.1018H22.3529V3.1552L0 3.1552V5.84446L22.353 5.84446V4.89798H27.0301C27.3223 7.19352 30.1122 9 33.5016 9ZM21.4898 5.04839L0.863293 5.04839V3.95161L21.4898 3.95161V5.04839ZM27.8662 4.49995C27.8662 2.45778 30.3944 0.796403 33.5017 0.796403C36.6091 0.796403 39.1372 2.45778 39.1372 4.49995C39.1372 6.54222 36.6091 8.2037 33.5017 8.2037C30.3944 8.2037 27.8662 6.54222 27.8662 4.49995Z" fill="#242424"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_2_324">
+                      <rect width="40" height="9" fill="white"/>
+                      </clipPath>
+                      </defs>
+                  </svg>
+                  <h1>Photo Gallery</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.</p>
+                  <button>View More</button>
+              </div>
+              <div class="gallery__wrapper-carousel col-12 col-lg-8">
+                  <div data-aos="fade-up" data-aos-duration="1000" class="owl-carousel owl-theme gallery-carousel">
+                      <div class="item">
+                          <img src="assets/images/home/gallery1.jpeg" alt="">
+                          <i class="bi bi-instagram"></i>
+                      </div>
+                      <div class="item">
+                          <img src="assets/images/home/gallery2.jpeg" alt="">
+                          <i class="bi bi-instagram"></i>
+                      </div>
+                      <div class="item">
+                          <img src="assets/images/home/gallery3.jpeg" alt="">
+                          <i class="bi bi-instagram"></i>
+                      </div>
+                      <div class="item">
+                          <img src="assets/images/home/gallery4.jpeg" alt="">
+                          <i class="bi bi-instagram"></i>
+                      </div>
+                      <div class="item">
+                          <img src="assets/images/home/gallery3.jpeg" alt="">
+                          <i class="bi bi-instagram"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
     </section>
   </main>
@@ -392,17 +450,47 @@
 </footer>
 <script src="sass/vendors/bootstrap.bundle.min.js"></script>
 <script src="sass/vendors/bootstrap.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 <script src="js/ap-tab2.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+  integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+    $(".gallery-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        nav: false,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        navText: [
+          '<span><i class="bi bi-chevron-left"></i></span>',
+          '<span><i class="bi bi-chevron-right"></i></span>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2.5,
+          },
+          1000: {
+            items: 4.5,
+          },
+        },
+      });
 </script>
 </body>
 </html>

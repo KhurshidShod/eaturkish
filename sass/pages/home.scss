@@ -147,6 +147,7 @@
     width: 100%;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background-color: var(--bgColor-white);
     &__wrapper{
         overflow: hidden;
         h1{
@@ -372,6 +373,7 @@
     width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    background-color: var(--bgColor-white);
     &__wrapper{
         width: 100%;
         text-align: center;
@@ -386,12 +388,14 @@
             font-size: $font23;
             font-weight: 700;
             letter-spacing: 4%;
+            color: var(--fontColor-black);
         }
         h1{
             font-size: $font48;
             font-weight: 500;
             letter-spacing: 3%;
             color: var(--bgColor-red)
+            
         }
         svg{
             path{
@@ -409,9 +413,8 @@
 }
 .video{
     width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     height: 700px;
+    padding-bottom: 3rem;
     background-image: url('../../assets/images/home/modal.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -444,6 +447,7 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     font-family: Cera;
+    background-color: var(--bgColor-grey);
     &__wrapper{
         &-text{
             h5{

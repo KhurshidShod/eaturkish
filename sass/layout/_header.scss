@@ -6,7 +6,7 @@ nav{
     background: var(--bgColor-red);
     color: white !important;
     font-family: 'Open Sans';
-    z-index: 9999999999999;
+    z-index: 999999;
     transition: .3s ease;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
@@ -160,6 +160,11 @@ nav{
                 letter-spacing: 0.04em;
                 padding: 5px 10px !important;
                 position: relative;
+            }
+            i{
+                font-size: $font24;
+                color: white;
+                cursor: pointer;
             }
             button{
                 @include btn(10px 40px, white, white)
