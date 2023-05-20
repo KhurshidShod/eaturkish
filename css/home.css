@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
   --bgColor-red: #BB2339;
   --bgColor-white: #FFFFFF;
@@ -423,6 +427,10 @@ footer .footer__wrapper-bottom .col-12 img {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 :root {

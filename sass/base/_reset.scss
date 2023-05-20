@@ -7,6 +7,9 @@
 *::after {
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 :root{
     --bgColor-red: #BB2339;
     --bgColor-white: #FFFFFF;
