@@ -42,4 +42,17 @@ item.forEach(itm => {
 
 window.addEventListener("load", () => {
     document.querySelector(".loader").style.display = "none";
+});
+
+window.addEventListener("scroll", () => {
+    if(window.pageYOffset > 100) {
+        document.querySelector('.backtop').style.display = 'flex';
+    } else {
+        document.querySelector('.backtop').style.display = 'none';
+    }
+});
+
+document.querySelector('.backtop').addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 })

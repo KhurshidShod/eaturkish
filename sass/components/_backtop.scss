@@ -1,0 +1,24 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+.backtop{
+    position: fixed;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    bottom: 1rem;
+    right: 1rem;
+    transition: .3s linear;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgColor-red);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    color: white;
+    @include df(center, center, row);
+    display: none;
+    font-size: $font32;
+    z-index: 999999999999;
+}
