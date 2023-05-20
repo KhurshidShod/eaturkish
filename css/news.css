@@ -581,7 +581,7 @@ footer .footer__wrapper-bottom .col-12 img {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: black;
+  background-color: var(--bgColor-red);
 }
 
 .loader div {

@@ -7,7 +7,7 @@
   z-index: 9999999999999999999;
   display: flex;
   @include df(center, center, row);
-  background-color: black;
+  background-color: var(--bgColor-red);
   div {
     width: 8vmax;
     height: 8vmax;
