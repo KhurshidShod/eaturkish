@@ -1,0 +1,115 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+footer{
+    background-color: var(--bgColor-red);
+    margin-top: 200px;
+    .footer__wrapper{
+        position: relative;
+        p{
+            color: white;
+        }
+        &-top{
+            gap: 14px;
+            width: 85%;
+            @media (max-width: 766px){
+            width: 95%;
+            }
+            background-color: var(--bgColor-red);
+            border: 1px solid white;
+            position: relative;
+            top: -150px;
+            box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.2);
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            font-family: Cera;
+            h5{
+                font-size: $font23;
+                font-weight: 700;
+                letter-spacing: 4%;
+                color: var(--fontColor-white);
+            }
+            h1{
+                font-size: $font48;
+                font-weight: 500;
+                letter-spacing: 3%;
+                text-align: center;
+                color: var(--fontColor-white);
+            }
+            p{
+                font-size: $font16;
+                font-weight: 400;
+                letter-spacing: 4%;
+                text-align: center;
+                font-family: 'Open Sans';
+                color: var(--fontColor-white);
+                text-align: center;
+            }
+            form{
+                display: flex;
+                gap: 1rem;
+                input{
+                    width: 60%;
+                    min-width: 250px;
+                    height: 50px;
+                    border-radius: 100px;
+                    -webkit-border-radius: 100px;
+                    -moz-border-radius: 100px;
+                    -ms-border-radius: 100px;
+                    -o-border-radius: 100px;
+                    outline: none;
+                    border: 1px solid #F5EFDB80;
+                    background-color: transparent;
+                    padding-left: 1rem;
+                }
+                button {
+                    @include btn(12px 32px, var(--fontColor-white), var(--fontColor-white))
+                }
+}
+        }
+        &-bottom{
+            font-family: 'Open Sans';
+            @include df(space-between, end, row);
+            width: 100%;
+                .col-12{
+                    &:first-child{
+                        p{
+                            &:last-child{
+                                max-width: 139px;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        p{
+                            max-width: 418px;
+                            text-align: center;
+                        }
+                    }
+                    &:last-child{
+                        p{
+                            max-width: 158px;
+                            text-align: center;
+                        }
+                    }
+                    h5{
+                        font-size: $font32;
+                        font-weight: 400;
+                        letter-spacing: 4%;
+                        color: white;
+                    }
+                    p{
+                        max-width: 280px;
+                        font-size: $font16;
+                        font-weight: 400;
+                        letter-spacing: 4%;
+                        color: white;
+                    }
+                    img{
+                        width: 250px;
+                    }
+                }
+        }
+    }
+}

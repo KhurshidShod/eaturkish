@@ -14,12 +14,12 @@
             justify-content: end;
             position: relative;
             height: 350px;
-            transition: .3s linear;
-            -webkit-transition: .3s linear;
-            -moz-transition: .3s linear;
-            -ms-transition: .3s linear;
-            -o-transition: .3s linear;
-        }
+            transition: all .3s linear;
+            -webkit-transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -ms-transition: all .3s linear;
+            -o-transition: all .3s linear;
+}
         img{
         @media (min-width: 992px) {
             position: relative;
@@ -35,7 +35,12 @@
             -moz-border-radius: 14px;
             -ms-border-radius: 14px;
             -o-border-radius: 14px;
-        }
+            transition: all .3s linear;
+            -webkit-transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -ms-transition: all .3s linear;
+            -o-transition: all .3s linear;
+}
         }
     }
     img{
