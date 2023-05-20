@@ -514,6 +514,9 @@ footer .footer__wrapper-bottom .col-12 img {
   background-color: var(--bgColor-grey);
   font-family: "Open Sans";
 }
+.about__container {
+  width: 100%;
+}
 .about__container h1 {
   color: var(--bgColor-red);
   font-family: Cera;
@@ -543,8 +546,13 @@ footer .footer__wrapper-bottom .col-12 img {
 @media (max-width: 992px) {
   .about__container .about__wrapper-contacts {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5px;
+    gap: 3rem;
     justify-items: center;
+  }
+}
+@media (max-width: 503px) {
+  .about__container .about__wrapper-contacts {
+    gap: 1.5rem;
   }
 }
 .about__container .about__wrapper-contacts-contact {
@@ -636,4 +644,9 @@ footer .footer__wrapper-bottom .col-12 img {
   border-radius: 12px;
   padding-left: 1rem;
   padding-top: 1rem;
+}
+.about__container iframe {
+  width: 100%;
+  height: 500px;
+  padding-top: 4rem;
 }

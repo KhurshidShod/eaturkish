@@ -179,6 +179,22 @@ body.dark .menu__wrapper-content-page-card:hover {
   -webkit-animation: logoRotate 7.5s linear infinite;
 }
 
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -696,13 +712,16 @@ footer .footer__wrapper-bottom .col-12 img {
   display: grid;
   grid-template-columns: 1.5fr 4fr;
 }
-.menu__wrapper .content__log {
-  bottom: -10px !important;
+.menu__wrapper .content__logo {
+  bottom: 150px !important;
 }
 @media (max-width: 992px) {
   .menu__wrapper {
     grid-template-columns: repeat(1, 1fr);
     overflow: hidden;
+  }
+  .menu__wrapper .content__logo {
+    display: none;
   }
 }
 @media (max-width: 992px) {

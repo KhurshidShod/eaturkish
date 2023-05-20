@@ -1,0 +1,44 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@import "../global";
+
+.about{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__wrapper{
+        h1{
+            color: var(--fontColor-black);
+            font-family: Cera;
+            font-size: $font64;
+            font-weight: 500;
+            letter-spacing: 3%;
+            @media (max-width: 767px){
+                font-size: $font48;
+            }
+        }
+        svg{
+            path{
+                fill: var(--bgColor-red);
+            }
+        }
+        display: flex;
+        @include df(center, center, column);
+        &-content{
+            max-width: 720px !important;
+            margin-top: 3rem;
+            img{
+                width: 100%;
+            }
+            p{
+                font-size: $font20;
+                color: var(--fontColor-black);
+                opacity: 0.8;
+                font-weight: 400;
+                letter-spacing: 4%;
+                line-height: 32px;
+                font-family: 'Open Sans';
+            }
+        }
+    }
+}

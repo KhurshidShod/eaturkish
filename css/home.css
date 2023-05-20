@@ -1247,6 +1247,22 @@ body.dark .menu__wrapper-content-page-card:hover {
   -webkit-animation: logoRotate 7.5s linear infinite;
 }
 
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "Cera";
   src: url(../../assets/fonts/Fontspring-DEMO-ceraroundpro-black.otf);
@@ -1536,22 +1552,6 @@ body.dark .menu__wrapper-content-page-card:hover {
 }
 .popdishes .container {
   position: relative;
-}
-@keyframes logoRotate {
-  0% {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
 }
 .popdishes .owl-carousel {
   margin-top: 2rem;

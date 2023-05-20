@@ -9,6 +9,7 @@
     background-color: var(--bgColor-grey);
     font-family: 'Open Sans';
     &__container{
+        width: 100%;
         h1{
             color: var(--bgColor-red);
             font-family: Cera;
@@ -35,8 +36,11 @@
                 justify-items: start;
                 @media (max-width: 992px){
                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 5px;
+                    gap: 3rem;
                     justify-items: center;
+                }
+                @media (max-width: 503px){
+                    gap: 1.5rem;
                 }
                 &-contact{
                     background-color: transparent;
@@ -127,6 +131,11 @@
                     }
                 }
             }
+        }
+        iframe{
+            width: 100%;
+            height: 500px;
+            padding-top: 4rem;
         }
     }
 }

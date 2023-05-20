@@ -11,14 +11,17 @@
     padding-bottom: 3rem;
     &__wrapper{
         position: relative;
-        .content__log{
-            bottom: -10px !important;
+        .content__logo{
+            bottom: 150px !important;
         }
         display: grid;
         grid-template-columns: 1.5fr 4fr;
         @media (max-width: 992px){
         grid-template-columns: repeat(1, 1fr);
         overflow: hidden;
+        .content__logo{
+            display: none;
+        }
         }
         &-buttons{
                 @media (max-width: 992px) {
