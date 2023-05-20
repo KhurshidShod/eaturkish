@@ -273,7 +273,7 @@ nav ul li button {
 
 nav ul li button:hover {
   background-color: white;
-  color: var(--bgColor-red);
+  color: white;
 }
 
 footer {
@@ -292,6 +292,7 @@ footer .footer__wrapper p {
 footer .footer__wrapper-top {
   gap: 14px;
   width: 85%;
+  z-index: 9;
   background-color: var(--bgColor-red);
   border: 1px solid white;
   position: relative;
@@ -687,7 +688,7 @@ nav ul li button {
 
 nav ul li button:hover {
   background-color: white;
-  color: var(--bgColor-red);
+  color: white;
 }
 
 footer {
@@ -706,6 +707,7 @@ footer .footer__wrapper p {
 footer .footer__wrapper-top {
   gap: 14px;
   width: 85%;
+  z-index: 9;
   background-color: var(--bgColor-red);
   border: 1px solid white;
   position: relative;
@@ -994,7 +996,7 @@ footer .footer__wrapper-bottom .col-12 img {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(0.9);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.5);
   -webkit-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(0.9);
   -moz-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(0.9);
   -ms-transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(0.9);
@@ -1328,7 +1330,7 @@ footer .footer__wrapper-bottom .col-12 img {
 }
 .hero .row .col-lg-6 button:hover {
   background-color: white;
-  color: var(--bgColor-red);
+  color: white;
 }
 .hero .row .col-lg-6 img {
   width: 100%;

@@ -269,7 +269,7 @@ nav ul li button {
 
 nav ul li button:hover {
   background-color: white;
-  color: var(--bgColor-red);
+  color: white;
 }
 
 footer {
@@ -288,6 +288,7 @@ footer .footer__wrapper p {
 footer .footer__wrapper-top {
   gap: 14px;
   width: 85%;
+  z-index: 9;
   background-color: var(--bgColor-red);
   border: 1px solid white;
   position: relative;
