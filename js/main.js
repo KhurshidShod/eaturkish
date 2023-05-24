@@ -28,6 +28,7 @@ function indicator(e) {
     slider.style.width = e.offsetWidth + "px";
     console.log(e.offsetLeft)
     console.log(e.offsetWidth)
+    console.log()
 }
 
 item.forEach(itm => {
